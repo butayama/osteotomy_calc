@@ -4,7 +4,7 @@ Be careful - it's difficult!!!
 Source: https://randomascii.wordpress.com/2012/02/25/comparing-floating-point-numbers-2012-edition/
 """
 import pytest
-import Calculation_of_a_single_cut_rotational_osteotomy as co
+import scripts.Calculation_of_a_single_cut_rotational_osteotomy as co
 import sys
 
 FLT_EPSILON = sys.float_info.epsilon

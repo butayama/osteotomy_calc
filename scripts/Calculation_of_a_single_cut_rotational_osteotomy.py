@@ -41,7 +41,7 @@ from ansimarkup import ansiprint
 from os import system, getcwd
 from os.path import join
 import sys
-from scripts.file_handling import text_file_object
+from scripts.filehandling import text_file_object
 
 
 def copyright_license_popup():
@@ -64,7 +64,6 @@ def input_real_loop(query, min_v, max_v, message="Input not valid. Please try ag
                 raise ValueError
 
         except Exception as exec:
-            print(message)
             raise ValueError(f"only float in the range between {min_v} and {max_v} degrees are valid") from exec
             continue
         else:
@@ -94,7 +93,7 @@ def input_angles_interactive():
     s_a_d = input_real_loop(f"sagittal_component S in degrees = ", -60, 60)
     t_a_d = input_real_loop(f"torsion_component T in degrees = ", -60, 60)
     return c_a_d, s_a_d, t_a_d
-    # TODO  Evaluate the input with diagrams. Warnibf if the angles are too big
+    # TODO  Evaluate the input with diagrams. Warn if the angles are too big
 
 
 def screen_out(filename, c_a_d, s_a_d, t_a_d, c_a, s_a, t_a, a_tad, a_oa, a_azi, a_ele, a_aor):
