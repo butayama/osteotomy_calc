@@ -1,4 +1,4 @@
-from scripts.filehandling import store_pickle_file
+from scripts.file_handling import store_pickle_file
 
 
 def get_angle(query):
