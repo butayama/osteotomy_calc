@@ -1,0 +1,39 @@
+  
+            Input Values
+
+            coronal component  C =    4.0 degrees
+            sagittal component S =   15.0 degrees
+            torsion_component  T =   -5.0 degrees
+ 
+            Transformation of degrees in radians
+            coronal component  C  =    0.0698
+            sagittal component S  =    0.2618
+            torsion component  T  =   -0.0873
+
+            Calculation according to Sangeorzan, Judd (1989)
+
+            true angular deformity (15)
+            A =   15.5 degrees ( 0.2702 rad )
+
+            orientation angle (16)
+            α =   75.4 degrees ( 1.3155 rad )
+
+            azimuth of vektor k (angle between z1 axis and the axis of rotation of vector k ) (13)
+            Φ =  -77.9 degrees (-1.3592 rad )
+
+            angle of rotation between x1 axis and the projection of k onto the x1-y1 plane (12)
+            Θ =  107.8 degrees( 1.8814 rad )
+
+            angle of rotation around k (14)
+            β =   16.3 degrees ( 0.2838 rad )
+
+
+
+            Copyright (C) 2020 | Uwe Schweinsberg | butayama@gmail.com
+
+            GNU GENERAL PUBLIC LICENSE Version 3
+            This program comes with ABSOLUTELY NO WARRANTY;
+            This is free software, and you are welcome to redistribute it
+            under certain conditions;  
+            For details visit <https://www.gnu.org/licenses/>.
+            
