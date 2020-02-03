@@ -9,25 +9,45 @@ Osteotomy
    :maxdepth: 2
    :caption: Contents:
 
+
 Calculation
 ===========
-.. automodule:: scripts.Calculation_of_a_single_cut_rotational_osteotomy
+.. automodule:: scripts.Calculation
    :members:
+   :undoc-members:
+   :show-inheritance:
+
 
 file_handling
 =============
-.. automodule:: scripts.filehandling
+.. automodule:: scripts.file_handling
    :members:
+   :undoc-members:
+   :show-inheritance:
+
 
 input_angles
 =============
 .. automodule:: scripts.input_angles
    :members:
+   :undoc-members:
+   :show-inheritance:
+
 
 tests
-==============
-.. automodule:: tests.test_Calculation_of_a_single_cut_rotational_osteotomy
+=====
+.. automodule:: tests.test_Calculation
    :members:
+
+
+Module contents
+---------------
+
+.. automodule:: scripts
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 
 Indices and tables
 ==================

@@ -41,7 +41,7 @@ from ansimarkup import ansiprint
 from os import system, getcwd
 from os.path import join
 import sys
-from scripts.filehandling import text_file_object
+from scripts.file_handling import text_file_object
 
 
 def copyright_license_popup():

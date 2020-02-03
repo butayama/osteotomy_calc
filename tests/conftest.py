@@ -1,6 +1,6 @@
 import os
 import sys
-from scripts.filehandling import write_pickle
+from scripts.file_handling import write_pickle
 import pytest
 
 # from print_me import message
