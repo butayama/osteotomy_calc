@@ -203,6 +203,7 @@ def txt_out(filename, c_a_d, s_a_d, t_a_d, c_a, s_a, t_a, a_tad, a_oa, a_azi, a_
             """)
         sys.stdout = sys.__stdout__
 
+
 def compute_results(_c_a_d, _s_a_d, _t_a_d):
     c_a = radians(_c_a_d)
     s_a = radians(_s_a_d)
@@ -216,17 +217,18 @@ def compute_results(_c_a_d, _s_a_d, _t_a_d):
     a_aor = acos(0.5 * (cos(t_a) + cos(a_tad) + cos(t_a) * cos(a_tad) - 1))
     return _c_a_d, _s_a_d, _t_a_d, c_a, s_a, t_a, a_tad, a_oa, a_azi, a_ele, a_aor
 
+
 def compute_np_results(_c_a_d, _s_a_d, _t_a_d):
     c_a = np.radians(_c_a_d)
     s_a = np.radians(_s_a_d)
     t_a = np.radians(_t_a_d)
 
     h1 = np.sqrt(np.tan(c_a) * np.tan(c_a) + np.tan(s_a) * np.tan(s_a))
-    a_tad = np.atan2(h1, 1)
-    a_oa = np.atan2(tan(s_a), tan(c_a))
-    a_azi = np.atan2(-(np.sin(a_oa) + np.sin(a_oa - t_a)), (np.cos(a_oa) + np.cos(a_oa - t_a)))
-    a_ele = np.atan2(2 * np.sin(a_tad) * np.cos(0.5 * t_a), np.sin(t_a) * (1 + np.cos(a_tad)))
-    a_aor = np.acos(0.5 * (np.cos(t_a) + np.cos(a_tad) + np.cos(t_a) * np.cos(a_tad) - 1))
+    a_tad = np.arctan2(h1, 1)
+    a_oa = np.arctan2(np.tan(s_a), np.tan(c_a))
+    a_azi = np.arctan2(-(np.sin(a_oa) + np.sin(a_oa - t_a)), (np.cos(a_oa) + np.cos(a_oa - t_a)))
+    a_ele = np.arctan2(2 * np.sin(a_tad) * np.cos(0.5 * t_a), np.sin(t_a) * (1 + np.cos(a_tad)))
+    a_aor = np.arccos(0.5 * (np.cos(t_a) + np.cos(a_tad) + np.cos(t_a) * np.cos(a_tad) - 1))
     return _c_a_d, _s_a_d, _t_a_d, c_a, s_a, t_a, a_tad, a_oa, a_azi, a_ele, a_aor
 
 
