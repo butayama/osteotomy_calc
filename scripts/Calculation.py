@@ -202,17 +202,10 @@ def txt_out(filename, c_a_d, s_a_d, t_a_d, c_a, s_a, t_a, a_tad, a_oa, a_azi, a_
             """)
         sys.stdout = sys.__stdout__
 
-
-def calculate():
-    """
-    Calculation of osteotomy angles according to Sangeorzan, Judd (1989)
-    """
-    c_a_d, s_a_d, t_a_d = input_angles_interactive()
-    filename = f"result/single_cut_rotational_osteotomy_{c_a_d}" + "_" + f"{s_a_d}" + "_" + f"{t_a_d}" + ".txt"
-
-    c_a = radians(c_a_d)
-    s_a = radians(s_a_d)
-    t_a = radians(t_a_d)
+def compute_results(_c_a_d, _s_a_d, _t_a_d):
+    c_a = radians(_c_a_d)
+    s_a = radians(_s_a_d)
+    t_a = radians(_t_a_d)
 
     h1 = sqrt(tan(c_a) * tan(c_a) + tan(s_a) * tan(s_a))
     a_tad = atan2(h1, 1)
@@ -220,6 +213,19 @@ def calculate():
     a_azi = atan2(-(sin(a_oa) + sin(a_oa - t_a)), (cos(a_oa) + cos(a_oa - t_a)))
     a_ele = atan2(2 * sin(a_tad) * cos(0.5 * t_a), sin(t_a) * (1 + cos(a_tad)))
     a_aor = acos(0.5 * (cos(t_a) + cos(a_tad) + cos(t_a) * cos(a_tad) - 1))
+    return _c_a_d, _s_a_d, _t_a_d, c_a, s_a, t_a, a_tad, a_oa, a_azi, a_ele, a_aor
+
+
+
+
+def calculate():
+    """
+    Calculation of osteotomy angles according to Sangeorzan, Judd (1989)
+    """
+    i_c_a_d, i_s_a_d, i_t_a_d = input_angles_interactive()
+    filename = f"result/single_cut_rotational_osteotomy_{i_c_a_d}" + "_" + f"{i_s_a_d}" + "_" + f"{i_t_a_d}" + ".txt"
+
+    c_a_d, s_a_d, t_a_d, c_a, s_a, t_a, a_tad, a_oa, a_azi, a_ele, a_aor = compute_results(i_c_a_d, i_s_a_d, i_t_a_d)
     return filename, c_a_d, s_a_d, t_a_d, c_a, s_a, t_a, a_tad, a_oa, a_azi, a_ele, a_aor
 
 
