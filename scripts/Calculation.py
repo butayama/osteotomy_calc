@@ -177,7 +177,7 @@ def txt_out(filename, c_a_d, s_a_d, t_a_d, c_a, s_a, t_a, a_tad, a_oa, a_azi, a_
             Calculation according to Sangeorzan, Judd (1989)
 
             true angular deformity (15)
-            A = {degrees(a_tad):6.1f} degrees ({a_tad:7.4f} rad )
+            A = {degrees(a_t.ad):61f} degrees ({a_tad:7.4f} rad )
 
             orientation angle (16)
             {chr(945)} = {degrees(a_oa):6.1f} degrees ({a_oa:7.4f} rad )
