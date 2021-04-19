@@ -43,6 +43,7 @@ from os.path import join
 import numpy as np
 import sys
 from scripts.file_handling import text_file_object
+from datetime import datetime
 
 
 def copyright_license_popup():
@@ -160,7 +161,7 @@ def txt_out(filename, c_a_d, s_a_d, t_a_d, c_a, s_a, t_a, a_tad, a_oa, a_azi, a_
     path_to_file = join(getcwd(), filename)
     text_file_object(path_to_file)
 
-    with open(filename, 'w') as f_txt:
+    with open(filename, 'w', encoding='utf-8') as f_txt:
         sys.stdout = f_txt
         print(f"""  
             Input Values
@@ -176,24 +177,26 @@ def txt_out(filename, c_a_d, s_a_d, t_a_d, c_a, s_a, t_a, a_tad, a_oa, a_azi, a_
 
             Calculation according to Sangeorzan, Judd (1989)
 
+            Results
+            =======
+            
             true angular deformity (15)
-            A = {degrees(a_t.ad):61f} degrees ({a_tad:7.4f} rad )
+            A = {degrees(a_tad):6.1f} degrees ({a_tad:7.4f} rad )
 
             orientation angle (16)
             {chr(945)} = {degrees(a_oa):6.1f} degrees ({a_oa:7.4f} rad )
 
-            azimuth of vektor k (angle between z1 axis and the axis of rotation of vector k ) (13)
+            azimuth of vector k: angle between x1 axis and the projection of k onto the x1-y1 plane (13)
             {chr(int("3A6", 16))} = {degrees(a_azi):6.1f} degrees ({a_azi:7.4f} rad )
 
-            angle of rotation between x1 axis and the projection of k onto the x1-y1 plane (12)
+            elevation of vector k: angle between z1 axis and the axis of rotation k (12)
             {chr(int("398", 16))} = {degrees(a_ele):6.1f} degrees({a_ele:7.4f} rad )
 
             angle of rotation around k (14)
             {chr(int("3B2", 16))} = {degrees(a_aor):6.1f} degrees ({a_aor:7.4f} rad )
 
 
-
-            Copyright (C) 2020 | Uwe Schweinsberg | butayama@gmail.com
+            Copyright (C) 2020-{datetime.today().year} | Lorenz Peter Schweinsberg DVM | lorenz.schweinsberg@fu–berlin.de 
 
             GNU GENERAL PUBLIC LICENSE Version 3
             This program comes with ABSOLUTELY NO WARRANTY;
