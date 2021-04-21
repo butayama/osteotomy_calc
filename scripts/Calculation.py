@@ -134,7 +134,7 @@ def screen_out(filename, c_a_d, s_a_d, t_a_d, c_a, s_a, t_a, a_tad, a_oa, a_azi,
 
     {'azimuth of vektor k (13) ':>35}{chr(int("3A6", 16))}{'= ':>3}{degrees(a_azi):8.1f} degrees ({a_azi:8.4f} rad )
 
-    {'elevation of vector k: (12) ':>35}{chr(int("398", 16))}{'= ':>3}{degrees(a_ele):8.1f} degrees ({a_ele:8.4f} rad )
+    {'elevation of vector k (12) ':>35}{chr(int("398", 16))}{'= ':>3}{degrees(a_ele):8.1f} degrees ({a_ele:8.4f} rad )
 
     {'angle of rotation around k (14) ':>35}{chr(int("3B2", 16))}{'= ':>3}{degrees(a_aor):8.1f} degrees ({a_aor:8.4f} rad )
 
