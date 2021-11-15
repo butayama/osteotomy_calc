@@ -1,7 +1,7 @@
 """  Calculation_of_a_single_cut_rotational_osteotomy.py
 
      License:  GNU GENERAL PUBLIC LICENSE Version 3
-         Copyright (C) 2020  Uwe Schweinsberg butayama@gmail.com
+         Copyright (C) 2020-2021  Uwe Schweinsberg butayama@gmail.com
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
